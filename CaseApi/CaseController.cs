@@ -21,4 +21,12 @@ public class CaseController : ControllerBase
         var newCase = await _caseService.CreateCaseAsync(caseDto);
         return Ok(newCase);
     }
+
+
+    [HttpGet]
+    public async Task<List<CaseDto>> GetCases()
+    {
+        var cases = await _caseService.GetCases();
+        return cases;
+    }
 }

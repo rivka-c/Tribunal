@@ -10,5 +10,6 @@ namespace Case.BL.Services.Interfaces
     public interface ICaseService
     {
         Task<CaseDto> CreateCaseAsync(CaseDto caseDto);
+        Task<List<CaseDto>> GetCases();
     }
 }
